@@ -5212,7 +5212,7 @@ function findMon(monNum) {
         document.getElementById('sp' + monNum).innerHTML = obj.BST.SP;
         document.getElementById('imgOfMon' + monNum).innerHTML = "";
         var monImg = document.createElement('img'); 
-        monImg.src = stats[selectMon] + ".png";
+        monImg.src = stats[selectMon].toLowerCase() + ".png";
         document.getElementById('imgOfMon' + monNum).appendChild(monImg).style.maxWidth = "200px";
         document.getElementById('imgOfMon' + monNum).appendChild(monImg).style.maxHeight = "130px";
         document.getElementById('imgOfMon' + monNum).appendChild(monImg);
