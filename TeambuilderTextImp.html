@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coromon - Text Import</title>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+        }
+        .home {
+            padding: 10px;
+            padding-top: 30px;
+        }
+        textarea {
+            width: 550px;
+            height: 1110px;
+        }
+    </style>
+
+    <script src="TeambuilderTextImpCode.js"></script>
+
+    <link rel="stylesheet" href="TeambuilderNav.css">
+    <link rel="icon" href="TeambuilderIcon.png">
+</head>
+<body>
+    <div>
+        <ul class=nav>
+            <li>
+                <a><b>Coromon Battlegrounds</b></a>
+            </li>
+            <li>
+                <a onclick="importText()" href="Teambuilder.html">Teambuilder</a>
+            </li>
+            <li>
+                <a href="TeambuilderTextConv.html">Convert to text</a>
+            </li>
+            <li>
+                <a class="select" href="TeambuilderTextImp.html">Import text</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="home">
+        <textarea id="importSets" placeholder=
+"Name @ Item
+Level: level
+Potency: potency
+Trait: trait
+PP: int HP / int Spe / int Atk / int Def / int SpA / int SpD / int SP
+Skills:
+-Skill
+-Skill
+-Skill
+-Skill
+[! Empty line !]
+(Next Coromon (same as above))"></textarea>
+    </div>
+</body>
+</html>

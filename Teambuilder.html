@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coromon - Teambuilder</title>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        input {
+            border: 1px solid black; 
+            border-radius: 3px; 
+            box-sizing: border-box; 
+            padding: 2px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+        th {
+            font-size: 20px;
+            text-align: center;
+        }
+        th, td {
+            padding: 7px;
+        }
+        .monTable tbody td:first-child {
+            float: left;
+        }
+        .monTable tbody td {
+            float: right;
+            font-size: 16px;
+        }
+        .monTable {
+            border: 1px solid rgb(0, 153, 255);
+            border-collapse: collapse; width:252px;
+            max-height:712px;
+            display: none;
+        }
+        .imgMon {
+            float: none;
+        }
+        tr.dataBorder {
+            border-top: 1px solid rgb(0, 153, 255);
+        }
+        .home {
+            padding: 10px;
+            padding-top: 0px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        #monInput {
+            float: left;
+            padding: 10px;
+        }
+        input.moveInput1, input.moveInput2, input.moveInput3, input.moveInput4, input.moveInput5, input.moveInput6 {
+            width: 120px;
+            height: 20px;
+        }
+        input.traitInput1, input.traitInput2, input.traitInput3, input.traitInput4, input.traitInput5, input.traitInput6 {
+            width: 120px;
+            height: 20px;
+        }
+        input.itemInput1, input.itemInput2, input.itemInput3, input.itemInput4, input.itemInput5, input.itemInput6 {
+            width: 120px;
+            height: 20px;
+        }
+        .monStats {
+            font-weight: bold;
+        }
+        
+    </style>
+
+    <link rel="stylesheet" href="TeambuilderNav.css">
+    <link rel="icon" href="TeambuilderIcon.png">
+
+    <script src="TeambuilderCode.js"></script>
+</head>
+<body>
+    <datalist id="coromon">
+        <option value="Cubzero"></option>
+        <option value="Aroara"></option>
+        <option value="Bearealis"></option>
+        <option value="Toruga"></option>
+        <option value="Embaval"></option>
+        <option value="Volcadon"></option>
+        <option value="Nibblegar"></option>
+        <option value="Sheartooth"></option>
+        <option value="Megalobite"></option>
+        <option value="Swurmy"></option>
+        <option value="Beezel"></option>
+        <option value="Humbee"></option>
+        <option value="Silquill"></option>
+        <option value="Gildwing"></option>
+        <option value="Golbeak"></option>
+        <option value="Slitherpin"></option>
+        <option value="Serpike"></option>
+        <option value="Houndos"></option>
+        <option value="Hountrion"></option>
+        <option value="Armado"></option>
+        <option value="Armadil"></option>
+        <option value="Armadon"></option>
+        <option value="Sanscale"></option>
+        <option value="Caradune"></option>
+        <option value="Bittybolt"></option>
+        <option value="Toravolt"></option>
+        <option value="Bloby"></option>
+        <option value="Molteye"></option>
+        <option value="Ashclops"></option>
+        <option value="Fiddly"></option>
+        <option value="Ucaclaw"></option>
+        <option value="Moffel"></option>
+        <option value="Digmow"></option>
+        <option value="Dugterra"></option>
+        <option value="Buzzlet"></option>
+        <option value="Bazzer"></option>
+        <option value="Rhynobuzz"></option>
+        <option value="Lunarpup"></option>
+        <option value="Lunarwulf"></option>
+        <option value="Eclyptor"></option>
+        <option value="Kryo"></option>
+        <option value="Krypeek"></option>
+        <option value="Krybeest"></option>
+        <option value="Bren"></option>
+        <option value="Pyrochick"></option>
+        <option value="Infinix"></option>
+        <option value="Acie"></option>
+        <option value="Deecie"></option>
+        <option value="Kyreptil"></option>
+        <option value="Kyraptor"></option>
+        <option value="Gella"></option>
+        <option value="Gellish"></option>
+        <option value="Gelaquad"></option>
+        <option value="Skarbone"></option>
+        <option value="Skuldra"></option>
+        <option value="Skelatops"></option>
+        <option value="Droople"></option>
+        <option value="Mudma"></option>
+        <option value="Arcta"></option>
+        <option value="Arcturos"></option>
+        <option value="Seraphace"></option>
+        <option value="Grimmask"></option>
+        <option value="Squidma"></option>
+        <option value="Magmilus"></option>
+        <option value="Lumon"></option>
+        <option value="Lampyre"></option>
+        <option value="Lumasect"></option>
+        <option value="Patterbit"></option>
+        <option value="Pitterbyte"></option>
+        <option value="Cyberite"></option>
+        <option value="Decibite"></option>
+        <option value="Centilla"></option>
+        <option value="Millidont"></option>
+        <option value="Taddle"></option>
+        <option value="Fibio"></option>
+        <option value="Chonktoad"></option>
+        <option value="Tinshel"></option>
+        <option value="Dunpod"></option>
+        <option value="Sandril"></option>
+        <option value="Blizzburd"></option>
+        <option value="Blizzian"></option>
+        <option value="Purrgy"></option>
+        <option value="Ghinx"></option>
+        <option value="Purrghast"></option>
+        <option value="Gauslime"></option>
+        <option value="Magnamire"></option>
+        <option value="Quagoo"></option>
+        <option value="Swampa"></option>
+        <option value="Squidly"></option>
+        <option value="Octotle"></option>
+        <option value="Ruptius"></option>
+        <option value="Vulbrute"></option>
+        <option value="Mooby"></option>
+        <option value="Molbash"></option>
+        <option value="Malavite"></option>
+        <option value="Flowish"></option>
+        <option value="Daricara"></option>
+        <option value="Mino"></option>
+        <option value="Blazitaur"></option>
+        <option value="Frova"></option>
+        <option value="Froshell"></option>
+        <option value="Glamoth"></option>
+        <option value="Otogy"></option>
+        <option value="Orotchy"></option>
+        <option value="Shimshell"></option>
+        <option value="Atlantern"></option>
+    </datalist>
+    <datalist id="items">
+        <option value="Duria Fruit"></option>
+        <option value="Fik Fruit"></option>
+        <option value="Cuco Fruit"></option>
+        <option value="Gao Fruit"></option>
+        <option value="Sur Fruit"></option>
+        <option value="Pomo Fruit"></option>
+        <option value="Mull Fruit"></option>
+        <option value="Juba Fruit"></option>
+        <option value="Canul Fruit"></option>
+        <option value="Oki Fruit"></option>
+        <option value="Dally Fruit"></option>
+        <option value="Dip Fruit"></option>
+        <option value="Ber Fruit"></option>
+    </datalist>
+    <datalist id="moves1"></datalist>
+    <datalist id="moves2"></datalist>
+    <datalist id="moves3"></datalist>
+    <datalist id="moves4"></datalist>
+    <datalist id="moves5"></datalist>
+    <datalist id="moves6"></datalist>
+    <datalist id="traits1"></datalist>
+    <datalist id="traits2"></datalist>
+    <datalist id="traits3"></datalist>
+    <datalist id="traits4"></datalist>
+    <datalist id="traits5"></datalist>
+    <datalist id="traits6"></datalist>
+    <datalist id="potency">
+        <option value="Standard"></option>
+        <option value="Potent"></option>
+        <option value="Perfect"></option>
+    </datalist>
+
+    <div>
+        <ul class=nav>
+            <li>
+                <a><b>Coromon Battlegrounds</b></a>
+            </li>
+            <li>
+                <a class="select" href="Teambuilder.html">Teambuilder</a>
+            </li>
+            <li>
+                <a onclick="submit()" href="TeambuilderTextConv.html">Convert to text</a>
+            </li>
+            <li>
+                <a href="TeambuilderTextImp.html">Import text</a>
+            </li>
+            <li>
+                <a onclick="reset()" href="">Reset</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class=home>
+        
+        <div>
+            <form name="mon1Form" autocomplete="off" action="TeambuilderTextConv.html">
+                <!--MON 1-->
+                <div id="monInput">
+                    <h2>Coromon 1</h2>
+                    <input id="Mon1" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(1) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel1">Level</label>
+                    <input id="monLevel1" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(1); totalStats(1);">
+                    <br/>
+                    <br/>
+                    <div id="hideData1" style="display: none;">
+                        <table id="monData1" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name1" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon1" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest1">PP:</label>
+                                        <input id="hpInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest1">PP:</label>
+                                        <input id="speInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest1">PP:</label>
+                                        <input id="atkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest1">PP:</label>
+                                        <input id="defInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest1">PP:</label>
+                                        <input id="spatkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest1">PP:</label>
+                                        <input id="spdefInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP1" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest1">PP:</label>
+                                        <input id="spInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp1"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves1" class="moveInput1" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves1" class="moveInput1" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves1" class="moveInput1" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves1" class="moveInput1" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait1" list="traits1" class="traitInput1" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem1" list="items" class="itemInput1" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency1" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.1">Potential Points Used:</label>
+                        <input id="totalPP.1" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+                <!--MON 2-->
+                <div id="monInput">
+                    <h2>Coromon 2</h2>
+                    <input id="Mon2" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(2) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel2">Level</label>
+                    <input id="monLevel2" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(2); totalStats(2);">
+                    <br/>
+                    <br/>
+                    <div id="hideData2" style="display: none;">
+                        <table id="monData2" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name2" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon2" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest2">PP:</label>
+                                        <input id="hpInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest2">PP:</label>
+                                        <input id="speInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest2">PP:</label>
+                                        <input id="atkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest2">PP:</label>
+                                        <input id="defInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest2">PP:</label>
+                                        <input id="spatkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest2">PP:</label>
+                                        <input id="spdefInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP2" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest2">PP:</label>
+                                        <input id="spInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp2"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves2" class="moveInput2" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves2" class="moveInput2" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves2" class="moveInput2" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves2" class="moveInput2" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait2" list="traits2" class="traitInput2" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem2" list="items" class="itemInput2" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency2" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.2">Potential Points Used:</label>
+                        <input id="totalPP.2" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+                <!--MON 3-->
+                <div id="monInput">
+                    <h2>Coromon 3</h2>
+                    <input id="Mon3" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(3) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel3">Level</label>
+                    <input id="monLevel3" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(3); totalStats(3);">
+                    <br/>
+                    <br/>
+                    <div id="hideData3" style="display: none;">
+                        <table id="monData3" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name3" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon3" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest3">PP:</label>
+                                        <input id="hpInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest3">PP:</label>
+                                        <input id="speInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest3">PP:</label>
+                                        <input id="atkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest3">PP:</label>
+                                        <input id="defInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest3">PP:</label>
+                                        <input id="spatkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest3">PP:</label>
+                                        <input id="spdefInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP3" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest3">PP:</label>
+                                        <input id="spInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp3"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves3" class="moveInput3" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves3" class="moveInput3" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves3" class="moveInput3" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves3" class="moveInput3" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait3" list="traits3" class="traitInput3" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem3" list="items" class="itemInput3" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency3" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.3">Potential Points Used:</label>
+                        <input id="totalPP.3" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+                <!--MON 4-->
+                <div id="monInput">
+                    <h2>Coromon 4</h2>
+                    <input id="Mon4" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(4) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel4">Level</label>
+                    <input id="monLevel4" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(4); totalStats(4);">
+                    <br/>
+                    <br/>
+                    <div id="hideData4" style="display: none;">
+                        <table id="monData4" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name4" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon4" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest4">PP:</label>
+                                        <input id="hpInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest4">PP:</label>
+                                        <input id="speInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest4">PP:</label>
+                                        <input id="atkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest4">PP:</label>
+                                        <input id="defInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest4">PP:</label>
+                                        <input id="spatkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest4">PP:</label>
+                                        <input id="spdefInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP4" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest4">PP:</label>
+                                        <input id="spInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp4"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves4" class="moveInput4" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves4" class="moveInput4" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves4" class="moveInput4" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves4" class="moveInput4" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait4" list="traits4" class="traitInput4" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem4" list="items" class="itemInput4" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency4" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.4">Potential Points Used:</label>
+                        <input id="totalPP.4" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+                <!--MON 5-->
+                <div id="monInput">
+                    <h2>Coromon 5</h2>
+                    <input id="Mon5" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(5) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel5">Level</label>
+                    <input id="monLevel5" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(5); totalStats(5);">
+                    <br/>
+                    <br/>
+                    <div id="hideData5" style="display: none;">
+                        <table id="monData5" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name5" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon5" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest5">PP:</label>
+                                        <input id="hpInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest5">PP:</label>
+                                        <input id="speInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest5">PP:</label>
+                                        <input id="atkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest5">PP:</label>
+                                        <input id="defInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest5">PP:</label>
+                                        <input id="spatkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest5">PP:</label>
+                                        <input id="spdefInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP5" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest5">PP:</label>
+                                        <input id="spInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp5"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves5" class="moveInput5" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves5" class="moveInput5" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves5" class="moveInput5" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves5" class="moveInput5" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait5" list="traits5" class="traitInput5" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem5" list="items" class="itemInput5" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency5" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.5">Potential Points Used:</label>
+                        <input id="totalPP.5" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+                <!--MON 6-->
+                <div id="monInput">
+                    <h2>Coromon 6</h2>
+                    <input id="Mon6" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(6) style="width: 166px; font-size: 16px;">
+                    <label for="monLevel6">Level</label>
+                    <input id="monLevel6" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(6); totalStats(6);">
+                    <br/>
+                    <br/>
+                    <div id="hideData6" style="display: none;">
+                        <table id="monData6" class="monTable">
+                            <thead>
+                                <tr style="background: rgb(0, 153, 255);">
+                                    <th colspan="3" id="name6" style="width: 250px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td id="imgOfMon6" class="imgMon" style="max-width: 180px; max-height: 145px; float: left;"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Type:</td>
+                                    <td style="border-left: 1px solid rgb(0, 153, 255);">
+                                        Total
+                                    </td>
+                                    <td id="type6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>HP:</td>
+                                    <td id="totalHP6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="hpInvest6">PP:</label>
+                                        <input id="hpInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="hp6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Speed:</td>
+                                    <td id="totalSpeed6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="speInvest6">PP:</label>
+                                        <input id="speInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spe6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Attack:</td>
+                                    <td id="totalAtk6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="atkInvest6">PP:</label>
+                                        <input id="atkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="atk6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Defence:</td>
+                                    <td id="totalDef6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="defInvest6">PP:</label>
+                                        <input id="defInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="def6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Atk:</td>
+                                    <td id="totalSpA6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spatkInvest6">PP:</label>
+                                        <input id="spatkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spa6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Sp. Def:</td>
+                                    <td id="totalSpD6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spdefInvest6">PP:</label>
+                                        <input id="spdefInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="spd6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>SP:</td>
+                                    <td id="totalSP6" class="monStats" style="width:37px;"></td>
+                                    <td>
+                                        <label for="spInvest6">PP:</label>
+                                        <input id="spInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                    </td>
+                                    <td id="sp6"></td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove1" list="moves6" class="moveInput6" required max="1">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove2" list="moves6" class="moveInput6" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove3" list="moves6" class="moveInput6" required max="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Move:</td>
+                                    <td>
+                                        <input id="monmove4" list="moves6" class="moveInput6" required max="1">
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Trait:</td>
+                                    <td>
+                                        <input id="montrait6" list="traits6" class="traitInput6" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Item:</td>
+                                    <td>
+                                        <input id="monitem6" list="items" class="itemInput6" required>
+                                    </td>
+                                </tr>
+                                <tr class="dataBorder">
+                                    <td>Potency:</td>
+                                    <td>
+                                        <input id="potency6" type="number" max="21" min="1" required style="width: 40px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <label for="totalPP.6">Potential Points Used:</label>
+                        <input id="totalPP.6" type="text" required onkeydown="return false" autocomplete="off" max="126" style="width: 50px;">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            <textarea id="coromonMon" style="display: none;"></textarea>
+        </div>
+    </div>
+</body>
+</html>

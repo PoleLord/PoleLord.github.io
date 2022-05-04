@@ -1,0 +1,30 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+ul.nav {
+    list-style: none;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 0;
+    background: rgb(220, 220, 220);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px;
+}
+ul.nav > li {
+    float: left;
+}
+ul.nav > li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+    border-right: 1px solid rgb(175, 175, 175);
+}
+.select {
+    background: rgb(200, 200, 200);
+    padding: 10px;
+}
