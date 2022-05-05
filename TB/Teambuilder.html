@@ -271,7 +271,7 @@
                     <h2>Coromon 1</h2>
                     <input id="Mon1" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(1) style="width: 166px; font-size: 16px;">
                     <label for="monLevel1">Level</label>
-                    <input id="monLevel1" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(1); totalStats(1);">
+                    <input id="monLevel1" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(1); setLevels(1); totalStats(1);">
                     <br/>
                     <br/>
                     <div id="hideData1" style="display: none;">
@@ -299,7 +299,7 @@
                                     <td id="totalHP1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest1">PP:</label>
-                                        <input id="hpInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="hpInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="hp1"></td>
                                 </tr>
@@ -308,7 +308,7 @@
                                     <td id="totalSpeed1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest1">PP:</label>
-                                        <input id="speInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="speInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="spe1"></td>
                                 </tr>
@@ -317,7 +317,7 @@
                                     <td id="totalAtk1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest1">PP:</label>
-                                        <input id="atkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="atkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="atk1"></td>
                                 </tr>
@@ -326,7 +326,7 @@
                                     <td id="totalDef1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest1">PP:</label>
-                                        <input id="defInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="defInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="def1"></td>
                                 </tr>
@@ -335,7 +335,7 @@
                                     <td id="totalSpA1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest1">PP:</label>
-                                        <input id="spatkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="spatkInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="spa1"></td>
                                 </tr>
@@ -344,7 +344,7 @@
                                     <td id="totalSpD1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest1">PP:</label>
-                                        <input id="spdefInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="spdefInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="spd1"></td>
                                 </tr>
@@ -353,7 +353,7 @@
                                     <td id="totalSP1" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest1">PP:</label>
-                                        <input id="spInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="totalPP(1); totalStats(1);" required style="width: 40px;">
+                                        <input id="spInvest1" class="PPinvest1" type="number" max="60" min="0" oninput="setMon(1); totalPP(1); totalStats(1);" required style="width: 40px;">
                                     </td>
                                     <td id="sp1"></td>
                                 </tr>
@@ -412,7 +412,7 @@
                     <h2>Coromon 2</h2>
                     <input id="Mon2" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(2) style="width: 166px; font-size: 16px;">
                     <label for="monLevel2">Level</label>
-                    <input id="monLevel2" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(2); totalStats(2);">
+                    <input id="monLevel2" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(2); setLevels(2); totalStats(2);">
                     <br/>
                     <br/>
                     <div id="hideData2" style="display: none;">
@@ -440,7 +440,7 @@
                                     <td id="totalHP2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest2">PP:</label>
-                                        <input id="hpInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="hpInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="hp2"></td>
                                 </tr>
@@ -449,7 +449,7 @@
                                     <td id="totalSpeed2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest2">PP:</label>
-                                        <input id="speInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="speInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="spe2"></td>
                                 </tr>
@@ -458,7 +458,7 @@
                                     <td id="totalAtk2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest2">PP:</label>
-                                        <input id="atkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="atkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="atk2"></td>
                                 </tr>
@@ -467,7 +467,7 @@
                                     <td id="totalDef2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest2">PP:</label>
-                                        <input id="defInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="defInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="def2"></td>
                                 </tr>
@@ -476,7 +476,7 @@
                                     <td id="totalSpA2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest2">PP:</label>
-                                        <input id="spatkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="spatkInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="spa2"></td>
                                 </tr>
@@ -485,7 +485,7 @@
                                     <td id="totalSpD2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest2">PP:</label>
-                                        <input id="spdefInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="spdefInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="spd2"></td>
                                 </tr>
@@ -494,7 +494,7 @@
                                     <td id="totalSP2" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest2">PP:</label>
-                                        <input id="spInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="totalPP(2); totalStats(2);" required style="width: 40px;">
+                                        <input id="spInvest2" class="PPinvest2" type="number" max="60" min="0" oninput="setMon(2); totalPP(2); totalStats(2);" required style="width: 40px;">
                                     </td>
                                     <td id="sp2"></td>
                                 </tr>
@@ -553,7 +553,7 @@
                     <h2>Coromon 3</h2>
                     <input id="Mon3" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(3) style="width: 166px; font-size: 16px;">
                     <label for="monLevel3">Level</label>
-                    <input id="monLevel3" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(3); totalStats(3);">
+                    <input id="monLevel3" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(3); setLevels(3); totalStats(3);">
                     <br/>
                     <br/>
                     <div id="hideData3" style="display: none;">
@@ -581,7 +581,7 @@
                                     <td id="totalHP3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest3">PP:</label>
-                                        <input id="hpInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="hpInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="hp3"></td>
                                 </tr>
@@ -590,7 +590,7 @@
                                     <td id="totalSpeed3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest3">PP:</label>
-                                        <input id="speInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="speInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="spe3"></td>
                                 </tr>
@@ -599,7 +599,7 @@
                                     <td id="totalAtk3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest3">PP:</label>
-                                        <input id="atkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="atkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="atk3"></td>
                                 </tr>
@@ -608,7 +608,7 @@
                                     <td id="totalDef3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest3">PP:</label>
-                                        <input id="defInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="defInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="def3"></td>
                                 </tr>
@@ -617,7 +617,7 @@
                                     <td id="totalSpA3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest3">PP:</label>
-                                        <input id="spatkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="spatkInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="spa3"></td>
                                 </tr>
@@ -626,7 +626,7 @@
                                     <td id="totalSpD3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest3">PP:</label>
-                                        <input id="spdefInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="spdefInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="spd3"></td>
                                 </tr>
@@ -635,7 +635,7 @@
                                     <td id="totalSP3" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest3">PP:</label>
-                                        <input id="spInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="totalPP(3); totalStats(3);" required style="width: 40px;">
+                                        <input id="spInvest3" class="PPinvest3" type="number" max="60" min="0" oninput="setMon(3); totalPP(3); totalStats(3);" required style="width: 40px;">
                                     </td>
                                     <td id="sp3"></td>
                                 </tr>
@@ -694,7 +694,7 @@
                     <h2>Coromon 4</h2>
                     <input id="Mon4" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(4) style="width: 166px; font-size: 16px;">
                     <label for="monLevel4">Level</label>
-                    <input id="monLevel4" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(4); totalStats(4);">
+                    <input id="monLevel4" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(4); setLevels(4); totalStats(4);">
                     <br/>
                     <br/>
                     <div id="hideData4" style="display: none;">
@@ -722,7 +722,7 @@
                                     <td id="totalHP4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest4">PP:</label>
-                                        <input id="hpInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="hpInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="hp4"></td>
                                 </tr>
@@ -731,7 +731,7 @@
                                     <td id="totalSpeed4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest4">PP:</label>
-                                        <input id="speInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="speInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="spe4"></td>
                                 </tr>
@@ -740,7 +740,7 @@
                                     <td id="totalAtk4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest4">PP:</label>
-                                        <input id="atkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="atkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="atk4"></td>
                                 </tr>
@@ -749,7 +749,7 @@
                                     <td id="totalDef4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest4">PP:</label>
-                                        <input id="defInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="defInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="def4"></td>
                                 </tr>
@@ -758,7 +758,7 @@
                                     <td id="totalSpA4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest4">PP:</label>
-                                        <input id="spatkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="spatkInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="spa4"></td>
                                 </tr>
@@ -767,7 +767,7 @@
                                     <td id="totalSpD4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest4">PP:</label>
-                                        <input id="spdefInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="spdefInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="spd4"></td>
                                 </tr>
@@ -776,7 +776,7 @@
                                     <td id="totalSP4" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest4">PP:</label>
-                                        <input id="spInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="totalPP(4); totalStats(4);" required style="width: 40px;">
+                                        <input id="spInvest4" class="PPinvest4" type="number" max="60" min="0" oninput="setMon(4); totalPP(4); totalStats(4);" required style="width: 40px;">
                                     </td>
                                     <td id="sp4"></td>
                                 </tr>
@@ -835,7 +835,7 @@
                     <h2>Coromon 5</h2>
                     <input id="Mon5" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(5) style="width: 166px; font-size: 16px;">
                     <label for="monLevel5">Level</label>
-                    <input id="monLevel5" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(5); totalStats(5);">
+                    <input id="monLevel5" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(5); setLevels(5); totalStats(5);">
                     <br/>
                     <br/>
                     <div id="hideData5" style="display: none;">
@@ -863,7 +863,7 @@
                                     <td id="totalHP5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest5">PP:</label>
-                                        <input id="hpInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="hpInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="hp5"></td>
                                 </tr>
@@ -872,7 +872,7 @@
                                     <td id="totalSpeed5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest5">PP:</label>
-                                        <input id="speInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="speInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="spe5"></td>
                                 </tr>
@@ -881,7 +881,7 @@
                                     <td id="totalAtk5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest5">PP:</label>
-                                        <input id="atkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="atkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="atk5"></td>
                                 </tr>
@@ -890,7 +890,7 @@
                                     <td id="totalDef5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest5">PP:</label>
-                                        <input id="defInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="defInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="def5"></td>
                                 </tr>
@@ -899,7 +899,7 @@
                                     <td id="totalSpA5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest5">PP:</label>
-                                        <input id="spatkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="spatkInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="spa5"></td>
                                 </tr>
@@ -908,7 +908,7 @@
                                     <td id="totalSpD5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest5">PP:</label>
-                                        <input id="spdefInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="spdefInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="spd5"></td>
                                 </tr>
@@ -917,7 +917,7 @@
                                     <td id="totalSP5" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest5">PP:</label>
-                                        <input id="spInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="totalPP(5); totalStats(5);" required style="width: 40px;">
+                                        <input id="spInvest5" class="PPinvest5" type="number" max="60" min="0" oninput="setMon(5); totalPP(5); totalStats(5);" required style="width: 40px;">
                                     </td>
                                     <td id="sp5"></td>
                                 </tr>
@@ -976,7 +976,7 @@
                     <h2>Coromon 6</h2>
                     <input id="Mon6" list="coromon" placeholder="Search Coromon" required autocomplete="off" oninput=setMon(6) style="width: 166px; font-size: 16px;">
                     <label for="monLevel6">Level</label>
-                    <input id="monLevel6" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setLevels(6); totalStats(6);">
+                    <input id="monLevel6" type="number" max="99" min="1" required style="width: 40px; font-size: 16px;" oninput="setMon(6); setLevels(6); totalStats(6);">
                     <br/>
                     <br/>
                     <div id="hideData6" style="display: none;">
@@ -1004,7 +1004,7 @@
                                     <td id="totalHP6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="hpInvest6">PP:</label>
-                                        <input id="hpInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="hpInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="hp6"></td>
                                 </tr>
@@ -1013,7 +1013,7 @@
                                     <td id="totalSpeed6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="speInvest6">PP:</label>
-                                        <input id="speInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="speInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="spe6"></td>
                                 </tr>
@@ -1022,7 +1022,7 @@
                                     <td id="totalAtk6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="atkInvest6">PP:</label>
-                                        <input id="atkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="atkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="atk6"></td>
                                 </tr>
@@ -1031,7 +1031,7 @@
                                     <td id="totalDef6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="defInvest6">PP:</label>
-                                        <input id="defInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="defInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="def6"></td>
                                 </tr>
@@ -1040,7 +1040,7 @@
                                     <td id="totalSpA6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spatkInvest6">PP:</label>
-                                        <input id="spatkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="spatkInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="spa6"></td>
                                 </tr>
@@ -1049,7 +1049,7 @@
                                     <td id="totalSpD6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spdefInvest6">PP:</label>
-                                        <input id="spdefInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="spdefInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="spd6"></td>
                                 </tr>
@@ -1058,7 +1058,7 @@
                                     <td id="totalSP6" class="monStats" style="width:37px;"></td>
                                     <td>
                                         <label for="spInvest6">PP:</label>
-                                        <input id="spInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="totalPP(6); totalStats(6);" required style="width: 40px;">
+                                        <input id="spInvest6" class="PPinvest6" type="number" max="60" min="0" oninput="setMon(6); totalPP(6); totalStats(6);" required style="width: 40px;">
                                     </td>
                                     <td id="sp6"></td>
                                 </tr>
